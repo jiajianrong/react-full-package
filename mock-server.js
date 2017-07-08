@@ -11,7 +11,7 @@ server.use(middlewares);
  * /
  */
 
-server.post('/pc/apartment/list', (req, res) => {
+server.post('/newpc/apartment/list', (req, res) => {
 
     res.send({
         "code": 0,
@@ -72,7 +72,7 @@ server.post('/pc/apartment/list', (req, res) => {
 
 });
 
-server.post('/pc/apartment/recommend', (req, res) => {
+server.post('/newpc/apartment/recommend', (req, res) => {
 
     res.send({
         "code": 0,
@@ -193,7 +193,7 @@ server.get('/getcity', (req, res) => {
     res.send({});
 });
 //公寓首页banner
-server.get('/pc/banner/list', (req, res) => {
+server.get('/newpc/banner/list', (req, res) => {
     res.send({
         "code": 0,
         "msg": "query apartments success",
@@ -237,7 +237,7 @@ server.get('/pc/banner/list', (req, res) => {
 
 });
 //合作申请form
-server.post('/pc/application/add', (req, res) => {
+server.post('/newpc/application/add', (req, res) => {
     console.log(req.body);
     res.send({
         "code": 0,
@@ -246,7 +246,7 @@ server.post('/pc/application/add', (req, res) => {
     });
 });
 //意见与反馈
-server.post('/pc/opinion/add', (req, res) => {
+server.post('/newpc/opinion/add', (req, res) => {
     console.log(req.body);
     res.send({
         "code": 0,
@@ -255,7 +255,7 @@ server.post('/pc/opinion/add', (req, res) => {
     });
 });
 //公寓推荐活动列表
-server.get('/pc/promotion/recommend', (req, res) => {
+server.get('/newpc/promotion/recommend', (req, res) => {
 
     res.send({
         "code": 0,

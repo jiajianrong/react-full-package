@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 
 
 import './Home.scss';
+import { fetchRecommendList } from '../../actions/home';
 import HomeRecommend from '../../components/HomeRecommend/HomeRecommend';
 
 
@@ -45,9 +46,26 @@ class Home extends React.Component {
     
     
     
+    componentDidMount () {
+
+        const { dispatch } = this.props;
+        //每次返回首页自动移动到顶部
+        //window.scrollTo(0, windowScrollDistance);
+        //打点统计数据
+        //coreTrace.send('home');
+        //拉取首页banner
+        //dispatch(fetchHomeBanner('/newpc/banner/list', { type: 1 }));
+        //拉取推荐公寓
+        dispatch(fetchRecommendList('/newpc/promotion/recommend', {type:1, count:10}));
+
+    }
+    
+    
+    
     render() {
         
         const { number, issue, lotteryTime, headline } = this.state;
+        const { cityList, homeRecommendList, homeBanner } = this.props;
         
         
         return (
@@ -75,7 +93,7 @@ class Home extends React.Component {
                 
                 <div className="Home-recommend">
                 
-                    <HomeRecommend recommendList={[]} />
+                    <HomeRecommend recommendList={homeRecommendList} />
                     
                     <Link to="/apartment/detail">
                         推荐1
@@ -103,4 +121,16 @@ class Home extends React.Component {
     }
 }
 
-export default connect()(Home)
+
+const getStateFun = (state, ownProps) => {
+
+    return {
+
+        homeRecommendList: state.homeRecommendList
+
+    }
+
+};
+
+
+export default connect(getStateFun)(Home)
