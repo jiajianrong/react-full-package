@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 
 import './Home.scss';
-
+import HomeRecommend from '../../components/HomeRecommend/HomeRecommend';
 
 
 class Home extends React.Component {
@@ -74,6 +74,9 @@ class Home extends React.Component {
                 </div>
                 
                 <div className="Home-recommend">
+                
+                    <HomeRecommend recommendList={[]} />
+                    
                     <Link to="/apartment/detail">
                         推荐1
                     </Link>
