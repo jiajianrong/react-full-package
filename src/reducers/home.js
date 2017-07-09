@@ -1,7 +1,12 @@
 //import initStateData from './initData';
 import { FETCH_HOME_RECOMMEND_LIST } from '../actions/home';
 
-export function homeRecommendList ( state=[]/* = initStateData.homeRecommendList*/, action ) {
+/**
+ * 处理首页推荐列表
+ * previousState 为 
+ * store.getState().homeRecommendList
+ */
+export function homeRecommendList ( previousState=[], action ) {
 
 	switch (action.type) {
 
@@ -11,7 +16,7 @@ export function homeRecommendList ( state=[]/* = initStateData.homeRecommendList
 
 		default:
 
-			return state
+			return previousState
 
 	}	
 

@@ -3,7 +3,6 @@ import thunk from 'redux-thunk';
 // import promiseMiddleware from 'redux-promise';
 import reducers from '../reducers/index';
 
-import initStore from './initStore';
 /**
  * 统计middleware
  * 功能：
@@ -43,6 +42,6 @@ let middlewares = [
  */
 let createAppStore = applyMiddleware(...middlewares)(createStore);
 
-let store = createAppStore(reducers, initStore);
+let store = createAppStore(reducers/*, {}*/);
 
 export default store;

@@ -26,53 +26,41 @@ ReactDOM.render(
                 
                 
                 
-                
+                {/* 首页 */}
                 <Route path="home" getComponent={(location, callback)=>{
-                    
                     require.ensure([], function (require) {
                         callback(null, require('./containers/Home/Home').default)
                     }, 'Home')
-                    
                 }} />
                 
                 
                 
-                {
-                /*<Route path="apartment" getComponent={(location, callback)=>{
-                    
-                    require.ensure([], function (require) {
-                        callback(null, require('./containers/Apartment/Apartment').default)
-                    }, 'Apartment')
-                    
-                }} />*/
-                }
-                
-                
+                {/* 公寓列表，公寓详情，公寓搜索 */}
                 <Route path="apartment" component={Apartment}>
-            
+                    
                     <IndexRedirect to="list"/>
-            
-                    <Route path="list" getComponent={(location, callback)=>{
-                            
+                    
+                    
+                    <Route path="list" getComponent={(location, callback)=>{ 
                         require.ensure([], function (require) {
                             callback(null, require('./containers/Apartment/ApartmentList').default)
                         }, 'ApartmentList')
-                
                     }} />
-            
+                    
+                    
                     <Route path="detail" getComponent={(location, callback)=>{
-                            
                         require.ensure([], function (require) {
                             callback(null, require('./containers/Apartment/ApartmentDetail').default)
                         }, 'ApartmentDetail')
-                
                     }} />
-            
+                    
                 </Route>
                 
                 
 
             </Route>
+            
+            
             
             <Redirect from="*" to="/home" />
             

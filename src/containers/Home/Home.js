@@ -14,20 +14,7 @@ class Home extends React.Component {
         super(props);
         
         this.state = {
-            number: {
-                red: '',
-                blue: ''
-            },
-            issue: '',
-            lotteryTime: '',
-            headline: [],
-            
-            isNewShow: false
         };
-        
-        this.data = {
-            
-        }
     }
     
     
@@ -92,24 +79,8 @@ class Home extends React.Component {
                 </div>
                 
                 <div className="Home-recommend">
-                
+                    <div>推荐公寓</div>
                     <HomeRecommend recommendList={homeRecommendList} />
-                    
-                    <Link to="/apartment/detail">
-                        推荐1
-                    </Link>
-                    
-                    &nbsp;
-                    
-                    <Link to="/apartment/detail">
-                        推荐2
-                    </Link>
-                    
-                    &nbsp;
-                    
-                    <Link to="/apartment/detail">
-                        推荐3
-                    </Link>
                 </div>
                 
                 <div className="Home-qa">
@@ -122,15 +93,21 @@ class Home extends React.Component {
 }
 
 
-const getStateFun = (state, ownProps) => {
+/**
+ * react-redux的connect，通过 connect(select)(App) 连接 store 和 App 容器组件
+ * mapStateToProps方法返回的对象，以及附带的dispatch方法会 以props的形式传递到container
+ * 即，在container中可以
+ * const { dispatch, homeRecommendList } = this.props;
+ * 
+ */
+const mapStateToProps = (state/*store.getState*/, ownProps) => {
 
     return {
-
         homeRecommendList: state.homeRecommendList
-
     }
 
 };
 
 
-export default connect(getStateFun)(Home)
+
+export default connect(mapStateToProps)(Home)
