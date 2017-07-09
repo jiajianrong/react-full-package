@@ -12,6 +12,9 @@ class ApartmentDetail extends React.Component {
     constructor(props) {
         super(props);
         
+        
+        
+        
         this.state = {
         };
     }
@@ -20,10 +23,12 @@ class ApartmentDetail extends React.Component {
     
     render() {
         
+        const { id } = this.props.location.query;
+        
         return (
             <div className="ApartmentDetail">
                 
-                Apartment_recommend_detail_1,2,3
+                Apartment_recommend_detail_id {id}
                 
             </div>
         )

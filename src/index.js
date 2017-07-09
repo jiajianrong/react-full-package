@@ -6,7 +6,6 @@ import { IndexRedirect, Route, Router, hashHistory, IndexRoute, Redirect } from 
 import store from './store/index';
 
 
-import './index.scss';
 import App from './containers/App';
 import Apartment from './containers/Apartment/Apartment';
 import registerServiceWorker from './registerServiceWorker';
@@ -57,7 +56,14 @@ ReactDOM.render(
                 </Route>
                 
                 
-
+                
+                {/* 常见问题 */}
+                <Route path="qa" getComponent={(location, callback)=>{
+                    require.ensure([], function (require) {
+                        callback(null, require('./containers/QA/QA').default)
+                    }, 'QA')
+                }} />
+                
             </Route>
             
             

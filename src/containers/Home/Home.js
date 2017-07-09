@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import './Home.scss';
 import { fetchRecommendList } from '../../actions/home';
 import HomeRecommend from '../../components/HomeRecommend/HomeRecommend';
+import HomeQA from '../../components/HomeQA/HomeQA';
 
 
 class Home extends React.Component {
@@ -43,7 +44,7 @@ class Home extends React.Component {
         //拉取首页banner
         //dispatch(fetchHomeBanner('/newpc/banner/list', { type: 1 }));
         //拉取推荐公寓
-        dispatch(fetchRecommendList('/newpc/promotion/recommend', {type:1, count:10}));
+        dispatch(fetchRecommendList('/newpc/promotion/recommend', {type:1, count:4}));
 
     }
     
@@ -58,37 +59,37 @@ class Home extends React.Component {
         return (
             <div className="Home">
                 
-                <div className="Home-header">
+                <div className="Home-section Home-header">
                     58月付
                 </div>
                 
-                <div className="Home-banner">
+                <div className="Home-section Home-banner">
                     房租月付,享美好生活
                 </div>
                 
-                <div className="Home-action">
+                <div className="Home-section Home-action">
                     <Link to="/apply">
                         我要租房
                     </Link>
                     
                     &nbsp;
                     
-                    <Link to="/apartment">
+                    <Link to="/apartment" style={{'color':'purple'}}>
                         我要租房
                     </Link>
                 </div>
                 
-                <div className="Home-recommend">
-                    <div>推荐公寓</div>
-                    <HomeRecommend recommendList={homeRecommendList} />
+                <div className="Home-section Home-recommend">
+                    <HomeRecommend title="推荐公寓" recommendList={homeRecommendList} />
                 </div>
                 
-                <div className="Home-qa">
-                    申请月付,我要租房
+                <div className="Home-section Home-qa">
+                    <HomeQA title="常见问题" />
                 </div>
                 
             </div>
-        )
+        );
+        // end return
     }
 }
 
