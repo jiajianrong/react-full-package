@@ -6,23 +6,23 @@ import './HomeQA.scss';
 
 export default class HomeQA extends React.Component {
 
-	render () {
+    render () {
 
         const { title } = this.props;
 
-		return (
+        return (
             <div className="HomeQA">
             
                 <Link to="/qa" className="title">{title}</Link>
                 
-    			<div className="HomeQA">
-    			    home_qa_list
+                <div className="HomeQA">
+                    home_qa_list
                 </div>
 
             </div>
-		)
+        )
 
-	}
+    }
 
 }
 
