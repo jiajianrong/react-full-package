@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import {connect} from 'react-redux';
 
 import QAItem from '../../components/QAItem/QAItem.js';
+import Feedback from '../../components/Feedback/Feedback.js';
 
 import './QA.scss';
 
@@ -126,6 +127,7 @@ class QA extends React.Component {
             }
         };
         
+        // 默认选择第一个tab
         this.state = {
             currTab: this.data.tabList[0]
         };
@@ -194,6 +196,14 @@ class QA extends React.Component {
                         }
                     </ul>
                 </section>
+                
+                <section>
+                    <Feedback />
+                </section>
+                
+                <div style={{paddingBottom: "20px"}}>
+                    客服电话10105800
+                </div>
                 
                 
             </div>

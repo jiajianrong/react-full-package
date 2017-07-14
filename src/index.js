@@ -40,7 +40,7 @@ ReactDOM.render(
                     <IndexRedirect to="list"/>
                     
                     
-                    <Route path="list" getComponent={(location, callback)=>{ 
+                    <Route path="list" getComponent={(location, callback)=>{
                         require.ensure([], function (require) {
                             callback(null, require('./containers/Apartment/ApartmentList').default)
                         }, 'ApartmentList')
