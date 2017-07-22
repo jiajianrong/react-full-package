@@ -1,6 +1,20 @@
 @charset "UTF-8";
 
 
+
+.App {
+    
+    .app-footer-logo {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        font-size: 10px;
+        color: #DBDBDB;
+    }
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +26,9 @@ body {
     position: relative;
     //font: 14px/20px Helvetica, sans-serif, arial;
     font-family: Helvetica, sans-serif, arial;
-    color: #333;
-    font-size-adjust: none;
+    color: #333333;
+    //font-size-adjust: none;
+    font-size: 14px;
     -webkit-text-size-adjust: none;
     background-color: #f6f6f6;
     

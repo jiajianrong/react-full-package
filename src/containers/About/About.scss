@@ -1,0 +1,228 @@
+.About {
+    color:#75767b;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("./img/about-banner.png");
+    background-color: #fff;
+    overflow: hidden;
+    > div {
+    	padding: 25px 15px;
+    }
+    h2 {
+    	color: #4b545d;
+    	font-size: 16px;
+    	text-align: center;
+    	height: 40px;
+    	line-height: 40px;
+    	font-weight: bold;
+    }
+    hr {
+    	margin: 0px auto 20px;
+    	background-color: #00d599;
+    	width: 15px;
+    	height: 2px;
+    	border: none;
+    }
+    .about_know {
+        padding: 0 15px;
+        div{
+            margin: 90px auto 0;
+            padding: 30px 0;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 14px;
+            background-color: #fff;
+            box-shadow: 0px 0px 6px 1px #eee;
+        }
+    	img {
+    		margin-bottom: 25px;
+			width: 111px;
+    	}
+    	p {
+    		height: 25px;
+    		line-height: 25px;
+    	}
+    	span {
+    		display: inline-block;
+    		width: 65px;
+    		height: 65px;
+    		line-height: 65px;
+    		color: #fff;
+    		background-color: #00d599;
+    		border-radius: 50%;
+    	}
+    	.about_know_pic {
+    		margin: 13px auto;
+    		width: 286px;
+    		height: 185px;
+    		background-image: url("./img/about-know2.png");
+    		background-size: contain;
+    		background-repeat: no-repeat;
+    	}
+    }
+    .about_adv {
+    	ul {
+    		overflow: hidden;
+    		li {
+	    		float: left;
+	    		width: 50%;
+    			padding: 0px 0px 7px 0px;
+    			box-sizing:border-box;
+				-webkit-box-sizing:border-box; /* Safari */
+    			&:before {
+	    			display:inline-block;
+	    			float: left;
+	    			margin: 4px 7px 0px 0px;
+	    			content:'';
+	    			width: 16px;
+	    			height: 36px;
+	    			background: url('./img/about-icon-apply1.png') no-repeat;
+	    			background-size: 16px 14px;
+    			}
+    		&:nth-child(2) {
+    			&:before {
+    				background-image: url('./img/about-icon-apply2.png');
+    				background-size: 14px 16px;
+    			}
+    		}
+    		&:nth-child(3) {
+    			&:before {
+    				background-image: url('./img/about-icon-apply3.png');
+    				background-size: 15px 16px;
+    			}
+    		}
+    		&:nth-child(4) {
+    			&:before {
+    				background-image: url('./img/about-icon-apply4.png');
+    				background-size: 15px 18px;
+    			}
+    		}
+		}
+	}
+	strong {
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		color: #4b545d;
+		height: 23px;
+		line-height: 23px;
+	}
+	small {
+		display: block;
+		font-size: 12px;
+		height: 23px;
+		line-height: 23px;
+	}
+    }
+    .about_demand {
+    	ul {
+    		overflow: hidden;
+    	}
+    	li {
+    		float: left;
+    		font-size: 14px;
+    		padding: 0px 7px 7px 0px;
+			box-sizing:border-box;
+			-webkit-box-sizing:border-box; /* Safari */
+    		&:before {
+    			display:inline-block;
+    			margin-right: 8px;
+    			content:'1';
+    			width: 16px;
+    			height: 16px;
+    			line-height: 16px;
+    			color: #fff;
+    			text-align: center;
+    			border-radius: 50%;
+    			background-color: #2dd19d;
+    		}
+    		&:nth-child(2) {
+	    		&:before {
+	    			content:'2';
+	    		}
+	    	}
+	    	&:nth-child(3) {
+	    		&:before {
+	    			content:'3';
+	    		}
+	    	}
+    	}
+    }
+
+    .about_flow {
+    	ul {
+    		overflow: hidden;
+    	}
+    	li {
+    		font-size: 14px;
+    		font-weight: bold;
+    		float: left;
+    		width: 50%;
+		    height: 36px;
+    		line-height: 36px;
+			box-sizing:border-box;
+			-webkit-box-sizing:border-box; /* Safari */
+			&:before {
+    			display:inline-block;
+			    position: relative;
+    			top: 4px;
+    			margin-right: 10px;
+    			content:'';
+    			width: 12px;
+    			height: 22px;
+    			background: url('./img/about-icon-flow1.png') no-repeat;
+    			background-size: contain;
+			}
+			&:nth-child(2) {
+	    		&:before {
+	    			margin-left:0px;
+	    			background-image: url('./img/about-icon-flow2.png');
+				}
+	    	}
+	    	&:nth-child(3) {
+	    		&:before {
+	    			background-image: url('./img/about-icon-flow3.png');
+				}
+	    	}
+	    	&:nth-child(4) {
+	    		&:before {
+	    			margin-left:0px;
+	    			background-image: url('./img/about-icon-flow4.png');
+				}
+	    	}
+    	}
+    }
+
+    .about_problem {
+    	font-size: 12px;
+    	line-height: 25px;
+    	li {
+    		margin-bottom: 5px;
+    	}
+    	p {
+    		padding-left: 20px;
+    	}
+    }
+    
+    
+    
+    
+    .bottom-fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 49px;
+        line-height: 49px;
+        background-color: #2FD19D;
+        
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+
+.App .app-footer-logo {
+    padding-bottom: 80px;
+}

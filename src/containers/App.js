@@ -9,6 +9,8 @@ class App extends Component {
       return (
           <div className="App">
               { this.props.children }
+              
+              <div className="app-footer-logo">属于你，够得着的幸福</div>
           </div>
       );
   }

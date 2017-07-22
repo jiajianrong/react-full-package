@@ -145,12 +145,13 @@ class QA extends React.Component {
                 this.setState({headline: data.ret_result})
             }
         )*/
+       
+       // window.scrollTo(0, 0);
     }
     
     
     
     componentDidMount() {
-
         
         
     }
@@ -173,6 +174,8 @@ class QA extends React.Component {
         
         return (
             <div className="QA">
+                
+                
                 <section>
                     <header className="qa-header"><span className="desc">问题类别</span></header>
                     <ul className="title-tab">
@@ -201,9 +204,9 @@ class QA extends React.Component {
                     <Feedback />
                 </section>
                 
-                <div style={{paddingBottom: "20px"}}>
-                    客服电话10105800
-                </div>
+                <a className="tel-us" href="tel:10105800">
+                    客服电话: 10105800
+                </a>
                 
                 
             </div>

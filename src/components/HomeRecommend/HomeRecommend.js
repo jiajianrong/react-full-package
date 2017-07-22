@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { Slider } from 'lm-ui-react';
+
 import './HomeRecommend.scss';
 
 
@@ -12,11 +14,8 @@ export default class HomeRecommend extends React.Component {
 
 		return (
             <div className="HomeRecommend">
-            
-                <div className="title">{title}</div>
                 
-    			<div className="outer-wrap">
-        			<div className="inner-wrap">
+    			<Slider>
                         {
         
                             recommendList.slice(0, 6).map((item, index) => {
@@ -25,13 +24,12 @@ export default class HomeRecommend extends React.Component {
                                     
                                     <Link to={{ pathname:'/apartment/detail', query:{id: item.apartment.id} }} 
                                           key={`HomeRecommend${index}`} 
-                                          className="every-item" >
-        
-                                        <span className="logo"></span>
-        
+                                          className="apartment-item" >
+                                        
+                                        <span className="logo" style={{ backgroundImage: `url(${item.apartment.logo})` }} ></span>
                                         <span className="name">{item.apartment.name}</span>
-        
-                                        <div className="introduce">{ item.apartment.short_introduction }</div>
+                                        <span className="introduce">{ item.apartment.short_introduction }</span>    
+                                        
         
                                     </Link>
                                 );
@@ -40,8 +38,7 @@ export default class HomeRecommend extends React.Component {
                             })
         
                         }
-                    </div>
-                </div>
+                </Slider>
 
             </div>
 		)

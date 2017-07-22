@@ -33,11 +33,12 @@ export default class QAItem extends React.Component {
         const { title, text } = this.props.item;
         
         let displayStr = this.state.unfold ? 'block' : 'none';
+        let arrowStr = this.state.unfold ? 'unfold' : '';
 
         return (
             <li className="QAItem">
-                <header className="item-title" onClick={ e => this.foldHanlder() }> {title} </header>
-                <div style={{"display": displayStr}}>
+                <header className={"item-title " + arrowStr} onClick={e=>this.foldHanlder()}>{title}</header>
+                <div className="item-content" style={{"display": displayStr}}>
                     {
                         text.map((sentence, index) => {
                             return (

@@ -5,7 +5,46 @@
     
     
     .item-title {
-        font-weight: 700;
-        padding: 10px 20px;
+        position: relative;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 10px 34px 10px 14px;
+        
+        &::before, &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            top: 50%;
+            margin-top: -1px;
+            //right: 8px;
+            width: 8px;
+            height: 1px;
+            background-color: #CBCBCB;
+        }
+        &::before {
+            -webkit-transform: rotate(135deg);
+            right: 6px;
+        }
+        &::after {
+            -webkit-transform: rotate(45deg);
+            right: 12px;
+        }
+    }
+    
+    .item-title.unfold {
+        &::before {
+            -webkit-transform: rotate(45deg);
+        }
+        &::after {
+            -webkit-transform: rotate(135deg);
+        }
+    }
+    
+    
+    .item-content {
+        font-size: 14px;
+        padding: 0 8px 8px 30px;
+        color: #75767b;
+        line-height: 22px;
     }
 }

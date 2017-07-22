@@ -44,6 +44,8 @@
     
     
     .title-tab {
+        font-size: 14px;
+        font-weight: 700;
         
         > li {
             display: inline-block;
@@ -57,5 +59,18 @@
         > li:first-child, li:nth-child(4) {
             border-left-width: 0;
         }
+    }
+    
+    
+    
+    
+    .tel-us {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 8px 16px;
+        border-radius: 16px;
+        color: #2dd19d;
+        font-size: 14px;
+        border: 1px solid #2dd19d;
     }
 }

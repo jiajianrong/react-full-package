@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
 import {connect} from 'react-redux';
+import { Slider, Carousel } from 'lm-ui-react';
 
 
 import './Home.scss';
 import { fetchRecommendList } from '../../actions/home';
 import HomeRecommend from '../../components/HomeRecommend/HomeRecommend';
-import HomeQA from '../../components/HomeQA/HomeQA';
 
 
 class Home extends React.Component {
@@ -59,33 +59,67 @@ class Home extends React.Component {
         return (
             <div className="Home">
                 
-                <div className="Home-section Home-header">
-                    58月付
-                </div>
                 
-                <div className="Home-section Home-banner">
-                    房租月付,享美好生活
-                </div>
+                <section className="section-banner">
+                    <Carousel height={143}>
+                        <div className="banner banner-1"></div>
+                        <div className="banner banner-2"></div>
+                    </Carousel>
+                </section>
                 
-                <div className="Home-section Home-action">
-                    <Link to="/apply">
-                        我要租房
+                
+                
+                <section className="section-actions">
+                    <Link to="/qa" className="action-item">
+                        <div className="item-apply-yuefu">
+                            <span>申请月付</span>
+                        </div>
                     </Link>
                     
-                    &nbsp;
-                    
-                    <Link to="/apartment" style={{'color':'purple'}}>
-                        我要租房
+                    <Link to="/qa" className="action-item">
+                        <div className="item-my-yuefu">
+                            <span>我的月付</span>
+                        </div>
                     </Link>
+                </section>
+                
+                
+                
+                <section className="section-advantage">
+                    <Link to="/about" className="section-header">
+                        月付优势<i className="header-symbol-angle-right">查看更多</i>
+                    </Link>
+                    
+                    <ul className="advantage-items">
+                        <li><span className="online-apply">线上申请</span></li>
+                        <li><span className="immediately-approve">秒级审批</span></li>
+                        <li><span className="monthly-pay">月付房租</span></li>
+                    </ul>
+                </section>
+                
+                
+                
+                <section className="section-recommend">
+                    <Link to="/apartment" className="section-header">
+                        推荐公寓<i className="header-symbol-angle-right">查看更多</i>
+                    </Link>
+                    
+                    <HomeRecommend recommendList={homeRecommendList} />
+                </section>
+                
+                
+                
+                <section className="section-cooperate">
+                    <Link to="/cooperate" className="center-href"></Link>
+                </section>
+                
+                
+                
+                <div className="qa-outer-wrap">
+                    <Link to="/qa" className="qa-href">客服帮助</Link>
                 </div>
                 
-                <div className="Home-section Home-recommend">
-                    <HomeRecommend title="推荐公寓" recommendList={homeRecommendList} />
-                </div>
                 
-                <div className="Home-section Home-qa">
-                    <HomeQA title="常见问题" />
-                </div>
                 
             </div>
         );

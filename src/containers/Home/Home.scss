@@ -1,26 +1,244 @@
 .Home {
     
-    .Home-section {
-        padding: 10px 0 10px 20px;
+    a {
+        color: #4b545d;
     }
     
-    .Home-header {
+    
+    > section {
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+    
+    
+    
+    .section-banner {
+        
+        margin-bottom: 0;
+        
+        .banner {
+            height: 100%;
+            
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .banner-1 {
+            background-image: url(./img/banner_1.jpg);
+        }
+        .banner-2 {
+            background-image: url(./img/banner_2.jpg);
+        }
         
     }
     
-    .Home-banner {
+    
+    
+    .section-actions {
+        display: -webkit-box;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        
+        .action-item {
+            display: block;
+            -webkit-box-flex: 1;
+            box-sizing: border-box;
+            padding: 20px 0;
+            
+            .item-apply-yuefu, .item-my-yuefu {
+                padding: 8px 0;
+            }
+            
+            .item-apply-yuefu {
+                border-right: 1px solid #F3F3F3;
+            }
+            
+            span {
+                position: relative;
+                padding-left: 50px;
+                
+                &::before {
+                    display: block;
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    left:  0px;
+                    width: 37px;
+                    height: 37px;
+                    background-image: url(img/icon-apply-yuefu.png);
+                    background-position: center center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+            
+            .item-2 span::before {
+                background-image: url(img/icon-my-yuefu.png);
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    
+    
+    
+    .section-advantage {
+        
+        .advantage-items {
+            display: -webkit-box;
+            text-align: center;
+            color: #4b545d;
+            padding: 0px 10px 20px 10px;
+            
+            > li {
+                -webkit-box-flex: 1;
+                
+                > span {
+                    position: relative;
+                    padding-left: 20px;
+                    
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        content: '';
+                        top: 50%;
+                        -webkit-transform: translateY(-50%);
+                        left:  0px;
+                    }
+                }
+                
+                
+                .online-apply {
+                    &::before {
+                        width: 15px;
+                        height: 15px;
+                        background-image: url(img/icon-online-apply.png);
+                        background-position: center center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+                .immediately-approve {
+                    &::before {
+                        width: 15px;
+                        height: 15px;
+                        background-image: url(img/icon-immediately-approve.png);
+                        background-position: center center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+                .monthly-pay {
+                    &::before {
+                        width: 15px;
+                        height: 15px;
+                        background-image: url(img/icon-monthly-pay.png);
+                        background-position: center center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    
+    .section-recommend {
         
     }
     
-    .Home-action {
+    
+    
+    .section-cooperate {
+        position: relative;
+        margin-top: -10px;
+        height: 111px;
+        background-image: url(img/bg-cooperate.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
         
+        .center-href {
+            position: absolute;
+            top: 56px;
+            left: 50%;
+            height: 30px;
+            width: 93px;
+            margin-left: -47px;
+        }
     }
     
-    .Home-recommend {
+    
+    
+    
+    .qa-outer-wrap {
+        padding-top: 44px;
+        padding-bottom: 8px;
+        text-align: center;
         
+        .qa-href {
+            font-size: 14px;
+            line-height: 100%;
+            color: #2dd19d;
+            padding: 8px 56px;
+            border: 1px solid #2dd19d;
+            border-radius: 15px;
+        }
     }
     
-    .Home-qa {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .section-header {
+        display: block;
+        overflow: hidden;
+        padding: 16px 14px;
+        text-align: left;
+        font-size: 16px;
+        line-height: 100%;
+        font-weight: bold;
         
+        .header-symbol-angle-right {
+            position: relative;
+            float: right;
+            font-size: 12px;
+            line-height: 100%;
+            color: #bdbdbd;
+            font-weight: 100;
+            padding-right: 12px;
+            
+            &::before, &::after {
+                display: block;
+                position: absolute;
+                content: '';
+                top: 50%;
+                //margin-top: -1px;
+                right: 0px;
+                width: 7px;
+                height: 1px;
+                background-color: #CBCBCB;
+            }
+            &::before {
+                -webkit-transform: rotate(25deg);
+                margin-top: -1px;
+            }
+            &::after {
+                -webkit-transform: rotate(155deg);
+                margin-top: 2px;
+            }
+        }
     }
+    
+    
+    
 }

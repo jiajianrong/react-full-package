@@ -1,27 +1,41 @@
 .HomeRecommend {
     
-    
-    .title {
-        display: block;
-        font-size: 20px;
-        font-weight: 600;
-        padding-bottom: 10px;
-    }
-    
-    
-    .outer-wrap {
-        overflow-x: hidden;
-    }
-    
-    
-    .inner-wrap {
-        overflow-x: auto;
-        white-space: nowrap;
+    .apartment-item {
         
-        .every-item {
-            display: table-cell;
-            width: 160px;
-            height: 180px;
+        display: block;
+        width: 130px;
+        height: 192px;
+        text-align: center;
+        font-size: 14px;
+        box-sizing: border-box;
+        box-shadow: 0 0 1px 1px #F8F8F8;
+        margin-top: 2px;
+        margin-right: 10px;
+        margin-bottom: 25px;
+        
+        .logo {
+            display: block;
+            height: 130px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .name {
+            display: block;
+            padding-top: 12px;
+            font-weight: 700;
+        }
+        .introduce {
+            padding-top: 6px;
+            margin: 0 10px;
+            display: block;
+            font-size: 12px;
+            color: #75767b;
+            
+            overflow: hidden;
+            word-break: break-all;
+            text-overflow:ellipsis;
+            white-space:nowrap;
         }
     }
 }

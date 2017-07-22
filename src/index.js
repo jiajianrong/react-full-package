@@ -13,6 +13,28 @@ import registerServiceWorker from './registerServiceWorker';
 //ReactDOM.render(<App />, document.getElementById('root'));
 
 
+/*
+ * https://github.com/ReactTraining/react-router/issues/2144#issuecomment-150939358
+ * router scrollY
+ */
+hashHistory.listen(location => {
+    // Use setTimeout to make sure this runs after React Router's own listener
+    setTimeout(() => {
+        // Keep default behavior of restoring scroll position when user:
+        // - clicked back button
+        // - clicked on a link that programmatically calls `history.goBack()`
+        // - manually changed the URL in the address bar (here we might want
+        // to scroll to top, but we can't differentiate it from the others)
+        if (location.action === 'POP') {
+            return;
+        }
+        // In all other cases, scroll to top
+        window.scrollTo(0, 0);
+    });
+});
+
+
+
 ReactDOM.render(
 
     <Provider store={store}>
@@ -62,6 +84,24 @@ ReactDOM.render(
                     require.ensure([], function (require) {
                         callback(null, require('./containers/QA/QA').default)
                     }, 'QA')
+                }} />
+                
+                
+                
+                {/* 关于我们 */}
+                <Route path="about" getComponent={(location, callback)=>{
+                    require.ensure([], function (require) {
+                        callback(null, require('./containers/About/About').default)
+                    }, 'About')
+                }} />
+                
+                
+                
+                {/* 合作 */}
+                <Route path="cooperate" getComponent={(location, callback)=>{
+                    require.ensure([], function (require) {
+                        callback(null, require('./containers/Cooperate/Cooperate').default)
+                    }, 'Cooperate')
                 }} />
                 
             </Route>

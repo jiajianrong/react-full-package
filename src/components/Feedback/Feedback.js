@@ -12,50 +12,66 @@ export default class Feedback extends React.Component {
         super(props);
         
         this.state = {
-            contact_info: '',
-            content: ''
+            content: '',
+            contact_info: ''
         }
     }
     
     
     submitHandler() {
-        fetchPost('/newpc/opinion/add', this.state, () => {
-            this.setState({
-                contact_info: '',
-                content: ''
-            })
+        
+        let {content, contact_info} = this.state;
+        let canSubmit = (content && contact_info);
+        
+        
+        canSubmit && fetchPost('/newpc/opinion/add', this.state, () => {
+            
         })
+        
+        canSubmit && setTimeout( () => {
+            this.setState({
+                content: '',
+                contact_info: ''
+            })
+            this.setState({
+                showState: !this.state.showState
+            })
+        }, 300 )
     }
 
     
    
     render() {
+        
+        let {content, contact_info} = this.state;
+        
 
         return (
             <div className="Feedback">
                 
-                
+                <section className="title">
+                    <header className="qa-header"><span className="desc">意见反馈</span></header>
+                </section>
                 
                 <Form>
                 
                     <div className="cards">
-                        <div className="form-title">多行文本</div>
+                        <div className="form-title">我要反馈</div>
                         <FormGroup>
                             <Input
                                 type='textarea'
                                 maxLength={200}
                                 rows={4}
-                                defaultText={'您好，请描述您遇到的问题'}
+                                defaultText={'您好，请描述您遇到的问题.'}
                                 value={this.state.content}
                                 onChange={(e) => {this.setState({content: e.target.value})}} />
                         </FormGroup>
                     </div>
                     
                     <div className="cards">
-                        <div className="form-title">普通输入框</div>
                         <FormGroup>
                             <Label>
-                                <span>姓名</span>
+                                <span>联系方式</span>
                             </Label>
                             <Input 
                                 type='input'
@@ -76,11 +92,18 @@ export default class Feedback extends React.Component {
                             btnType='primary'
                             isRadius={true}
                             onClick={this.submitHandler.bind(this)}
-                        >提交申请</Button>
+                        >提交反馈</Button>
                     </div>
                 </div>
                 
                 
+                
+                <Toast
+                    showState={this.state.showState}
+                    toastType={"Hint"}
+                    timeControl={{ time: 2000, cbFun: () => {this.setState({showState: false})} }}
+                    opacity={0}
+                    message={'已收到您的反馈信息'} />
                 
             </div>
         )
