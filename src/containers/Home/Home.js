@@ -6,6 +6,7 @@ import { Slider, Carousel } from 'lm-ui-react';
 
 import './Home.scss';
 import { fetchRecommendList } from '../../actions/home';
+import HomeBanner from '../../components/HomeBanner/HomeBanner';
 import HomeRecommend from '../../components/HomeRecommend/HomeRecommend';
 
 
@@ -61,10 +62,7 @@ class Home extends React.Component {
                 
                 
                 <section className="section-banner">
-                    <Carousel height={143}>
-                        <div className="banner banner-1"></div>
-                        <div className="banner banner-2"></div>
-                    </Carousel>
+                    <HomeBanner />
                 </section>
                 
                 

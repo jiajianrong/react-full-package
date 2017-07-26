@@ -1,0 +1,104 @@
+.ApartmentTextDetail {
+  color: #4b545d;
+  .margin-bot {
+    margin-bottom: 10px;
+  }
+  .info-card {
+    padding: 30px 15px;
+    background-color: #ffffff;
+    .info-cards-hd {
+      font-size: 18px;
+      font-weight: bold;
+      .info-cards-cont{
+        font-size: 14px;
+      }
+      &>span{
+        margin-right: 10px;
+      }
+      .icon-fire-suffix {
+        display: inline-block;
+        margin-left: 10px;
+        height: 17px;
+        width: 15px;
+        background: url(./img/info-card-fire.png);
+        background-size: cover;
+      }
+    }
+    .info-cards-cont {
+      margin-top: 21px;
+      font-size: 14px;
+      color: #75767b;
+    }
+    .info-tips {
+      margin-top: 33px;
+      font-size: 12px;
+    }
+  }
+  .yf-apartment-card{
+    padding: 0;
+    .info-card{
+      padding:25px 15px ;
+      .info-cards-hd{
+        margin-bottom: 10px;
+        .active{
+          display: inline-block;
+          margin-left: 11px;
+          width: 57px;
+          font-size: 10px;
+          height: 18px;
+          line-height: 20px;
+          font-weight: normal;
+          color: #ffffff;
+          text-align: center;
+          background-color: #ffb80b;
+          border-radius: 2px;
+        }
+      }
+      .des{
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .server-list{
+        font-size: 11px;
+        margin-bottom: 25px;
+        &>span{
+          display: inline-block;
+          height: 22px;
+          line-height: 22px;
+          padding-left: 6px;
+          padding-right: 6px;
+          border: 1px solid #4b545d;
+          margin-right: 5px;
+          margin-top: 5px;
+        }
+      }
+      .price{
+        font-size: 18px;
+        color: #ff5653;
+        &>span:nth-of-type(2){
+          margin-left: 10px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .yf-apartment-server-city{
+    .hot-position{
+      .hd{
+        height: 19px;
+        padding-left: 24px;
+        background: url(./img/info-card-site.png) left no-repeat ;
+        background-size: contain;
+      }
+      margin-bottom: 39px;
+    }
+    .hot-district{
+      .hd{
+        height: 19px;
+        padding-left: 24px;
+        background: url(./img/info-card-floor.png) left no-repeat ;
+        background-size: contain;
+      }
+    }
+  }
+}

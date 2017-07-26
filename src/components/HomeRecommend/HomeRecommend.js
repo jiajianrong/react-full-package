@@ -22,7 +22,7 @@ export default class HomeRecommend extends React.Component {
         
                                 return (
                                     
-                                    <Link to={{ pathname:'/apartment/detail', query:{id: item.apartment.id} }} 
+                                    <Link to={{ pathname:'/apartment/detail', query:{id: item.apartment.id} }}
                                           key={`HomeRecommend${index}`} 
                                           className="apartment-item" >
                                         

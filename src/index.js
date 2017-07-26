@@ -8,6 +8,7 @@ import store from './store/index';
 
 import App from './containers/App';
 import Apartment from './containers/Apartment/Apartment';
+import Apply from './containers/Apply/Apply';
 import registerServiceWorker from './registerServiceWorker';
 
 //ReactDOM.render(<App />, document.getElementById('root'));
@@ -103,6 +104,38 @@ ReactDOM.render(
                         callback(null, require('./containers/Cooperate/Cooperate').default)
                     }, 'Cooperate')
                 }} />
+                
+                
+                
+                {/* 登录 */}
+                <Route path="login" getComponent={(location, callback)=>{
+                    require.ensure([], function (require) {
+                        callback(null, require('./containers/Login/Login').default)
+                    }, 'Login')
+                }} />
+                
+                
+                
+                {/* 申请，申请完成 */}
+                <Route path="apply" component={Apply}>
+                    
+                    <IndexRedirect to="form"/>
+                    
+                    
+                    <Route path="form" getComponent={(location, callback)=>{
+                        require.ensure([], function (require) {
+                            callback(null, require('./containers/Apply/ApplyForm').default)
+                        }, 'ApplyForm')
+                    }} />
+                    
+                    
+                    <Route path="done" getComponent={(location, callback)=>{
+                        require.ensure([], function (require) {
+                            callback(null, require('./containers/Apply/ApplyDone').default)
+                        }, 'ApplyDone')
+                    }} />
+                    
+                </Route>
                 
             </Route>
             

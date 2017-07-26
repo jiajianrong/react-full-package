@@ -1,0 +1,21 @@
+.apartment-footer {
+
+  position: fixed;
+  bottom: 0;
+  background-color:#f6f6f6 ;
+  width: 100%;
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 15px;
+
+  .text{
+
+    display: inline-block;
+    height: 15px;
+    width: 109px;
+    background: url(./img/footer-logo.png) center no-repeat;
+    background-size: cover;
+
+  }
+
+}

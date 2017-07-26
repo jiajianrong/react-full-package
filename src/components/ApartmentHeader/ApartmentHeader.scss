@@ -1,0 +1,225 @@
+.ApartmentHeader {
+  width: 100%;
+  .color-red {
+    color: #ff552e;
+  }
+
+  .apartment-filter-select {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    background-color: white;
+    color: #333333;
+    .select-item {
+      position: relative;
+      display: inline-block;
+      font-size: 14px;
+      width: 33%;
+      text-align: center;
+      line-height: 32px;
+      .select-item-lists{
+        .yf-select-group{
+          background-color: #ffffff;
+        }
+      }
+      .label {
+        display: inline-block;
+        &:after {
+          display: inline-block;
+          content: '';
+          width: 0;
+          height: 0;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          margin-left: 5px;
+        }
+      }
+      .label-before {
+        &:after {
+          border-top: 4px solid black;
+        }
+
+      }
+      .label-after {
+        &:after {
+          border-bottom: 4px solid black;
+        }
+      }
+
+      .filter{
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        line-height: 44px;
+      }
+      .filter-before {
+        display: inline-block;
+        height: 11px;
+        line-height: 11px;
+        background: url(./img/filter.png) no-repeat right;
+        background-size: contain;
+        padding-right: 14px;
+      }
+
+      .filter-after {
+        display: inline-block;
+        height: 11px;
+        line-height: 11px;
+        background: url(./img/filter-red.png) no-repeat right;
+        background-size: contain;
+        padding-right: 14px;
+      }
+
+      .select-item-lists {
+        position: fixed;
+        top: 30px;
+        bottom: 0;
+        left: 0;
+        z-index: 110;
+        display: none;
+        margin-top: 14px;
+        border-top: 1px solid #f3f3f3;
+        text-align: left;
+        overflow: auto;
+        width: 100%;
+        .bg{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #000000;
+          opacity: 0.1;
+          z-index: -1;
+          //margin-top: -5px;
+        }
+        .yf-select-item-wrapper {
+          padding-left: 15px;
+          padding-right: 15px;
+          height: 32px;
+          border-bottom: 1px solid #f3f3f3;
+          label {
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+          }
+        }
+      }
+      .show {
+        display: block;
+      }
+    }
+    .lm-ui-sort {
+
+      position: relative;
+      display: inline-block;
+
+      .type-lists {
+        position: fixed;
+        left: 0;
+        z-index: 110;
+        display: none;
+        margin-top:0;
+        border-top: 1px solid #f6f6f6;
+        text-align: left;
+        background-color: #ffffff;
+        overflow: auto;
+        top: 30px;
+      }
+      .show {
+        display: block;
+      }
+      .yf-select-group {
+
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f3f3f3;
+        .yf-select-item-wrapper{
+          display: inline-block;
+        }
+
+      }
+
+      .btn-group {
+
+        position: fixed;
+        bottom: 0;
+        .box {
+
+          display: inline-block;
+          font-size: 16px;
+          height: 44px;
+          border: none;
+
+        }
+        .cancel {
+          border-radius: 0;
+          user-select: none;
+          outline: none;
+          border: none;
+          text-align: center;
+          vertical-align: middle;
+          width: 100%;
+          height: 100%;
+          border-top: 1px solid #e6e6e6;
+          color: #333333;
+          background-color: #ffffff;
+
+        }
+        .sure{
+          border-radius: 0;
+          user-select: none;
+          border: none;
+          text-align: center;
+          vertical-align: middle;
+          width: 100%;
+          height: 100%;
+          color: #ffffff;
+          background-color: #ff552e;
+
+        }
+      }
+
+    }
+
+  }
+
+  .apartment-filter-query {
+    padding: 7px 15px;
+    margin-top: 45px;
+    .query-input-model {
+      position: relative;
+      background-color: #ffffff;
+      padding-left: 31px;
+      padding-right: 14px;
+      font-size: 12px;
+      height: 28px;
+      overflow: hidden;
+      .query-btn {
+        position: absolute;
+        float: left;
+        display: inline-block;
+        margin-top: 8px;
+        left: 14px;
+        height: 12px;
+        width: 12px;
+        background: url(./img/serach.png) center no-repeat;
+        background-size: contain;
+      }
+      .query-input {
+        height: 100%;
+        width: 100%;
+        //padding-left: 16px;
+        padding-right: 16px;
+        font-size: 12px;
+        float: left;
+        border: none;
+        outline: none;
+        border-radius: 2px;
+      }
+    }
+  }
+
+}
