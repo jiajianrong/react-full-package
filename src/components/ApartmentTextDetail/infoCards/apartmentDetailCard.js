@@ -22,7 +22,7 @@ export default class ApartmentDetailCard extends React.Component {
     delayRequestList() {
 
         const id=window.location.href.replace(/.*\?id=(\w+)/gi,($0,$1)=>{ return $1});
-        let homeIdList=this.props.homeRecommendList&&this.props.homeRecommendList.map((item,index)=>{
+        let homeIdList=this.props.homeRecommendList&&this.props.homeRecommendList.slice(0,6).map((item,index)=>{
 
                 return item.apartment.id;
 

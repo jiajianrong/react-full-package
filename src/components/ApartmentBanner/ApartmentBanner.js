@@ -28,7 +28,8 @@ export default class ApartmentBanner extends React.Component {
                     autoplay= {false}
                     autoplayInterval={8000}
                     arrow={false}
-                    dots={true}
+                    dots={false}
+                    page={true}
                     children={imgListDiv}
             />
 
